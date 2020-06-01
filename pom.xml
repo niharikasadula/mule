@@ -17,8 +17,47 @@
 		<app.runtime>4.3.0</app.runtime>
 		<mule.maven.plugin.version>3.3.5</mule.maven.plugin.version>
 	</properties>
-
+	
 	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.mule.tools.maven</groupId>
+				<artifactId>mule-maven-plugin</artifactId>
+				<version>${mule.maven.plugin.version}</version>
+                                <extensions>true</extensions>
+			</plugin>
+
+			<plugin>
+                        <groupId>org.mule.tools.maven</groupId>
+                        <artifactId>mule-maven-plugin</artifactId>
+                        <version>${mule.maven.plugin.version}</version>
+                        <configuration>
+             <cloudbHubDeployment>
+                  <muleVersion>${app.runtime}</muleVersion>
+                  <username>niharikaniha</username>
+                  <password>Niha@123</password>
+                  <environment>Sandbox</environment>
+                  <!-- <region>eu-central-1</region>  -->
+                  <workerType>Micro</workerType>
+                  <workers>1</workers>
+                  <uri>https://anypoint.mulesoft.com</uri>;
+                  <applicationName>app-mmm</applicationName>
+             </cloudbHubDeployment>
+          </configuration>
+          <executions>
+             <execution>
+                <id>deploy</id>
+                <phase>deploy</phase>
+                <goals>
+                   <goal>deploy</goal>
+                </goals>
+             </execution>
+           </executions>
+                    </plugin>
+   	       </plugins>
+</build>
+
+	<!-- <build>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -43,7 +82,7 @@
   <username>niharikaniha</username>
   <password>Niha@123</password>
   <environment>Sandbox</environment>
-  <!-- <region>eu-central-1</region>  -->
+  <region>eu-central-1</region> 
   <workerType>Micro</workerType>
   <workers>1</workers>
   <uri>https://anypoint.mulesoft.com</uri>;
@@ -61,7 +100,7 @@
 </executions>
    </plugin>
    	</plugins>
-	</build>
+	</build> -->
 
 	<dependencies>
         <dependency>

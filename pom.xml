@@ -18,7 +18,7 @@
 		<mule.maven.plugin.version>3.3.5</mule.maven.plugin.version>
 	</properties>
 	
-	<!-- <build>
+	 <build>
 		<plugins>
 			<plugin>
 				<groupId>org.mule.tools.maven</groupId>
@@ -56,9 +56,9 @@
            </executions>
                     </plugin>
    	       </plugins>
-</build> -->
+</build>
 
-    <build>
+    <!-- <build>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -101,7 +101,7 @@
 </executions>
    </plugin>
    	</plugins>
-	</build> 
+	</build> --> 
 
 	<dependencies>
         <dependency>

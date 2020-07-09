@@ -80,8 +80,8 @@
 <configuration>
 <cloudbHubDeployment>
 <muleVersion>${app.runtime}</muleVersion>
-<username>niharikaniha</username>
-<password>Niha@123</password>
+<username>niharikaannu</username>
+<password>Annu@12345</password>
 <environment>Sandbox</environment>
 <!-- <region>eu-central-1</region> -->
 <workerType>Micro</workerType>
